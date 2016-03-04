@@ -25,7 +25,7 @@
 
 <div class="container">
     <h1 style="text-align: center">{{ trans('ticketit::install.initial-setup') }}</h1>
-    <form class="form-signin" action="/tickets-install" method="post" style="max-width: 500px">
+    <form class="form-signin" action="{{url('/tickets-install') }}" method="post" style="max-width: 500px">
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <h3 class="form-signin-heading">{{ trans('ticketit::install.master-template-file') }}</h3>
         <select id="master" name="master" class="form-control" required autofocus>
